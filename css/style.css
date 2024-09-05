@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.maain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 150vh;
+}
+
+.container-main {
+  max-width: 100vw;
+  width: 100%;
+  padding-inline: 1rem 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 90vw;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .container-main {
+    max-width: 620px;
+    width: 620px;
+  }
+}
+@media (min-width: 768px) {
+  .container-main {
+    max-width: 480px;
+  }
+}
+
+article {
+  margin: 1em auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #B18B7B;
+  color: #F6F6F6;
+  position: relative;
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: fixed;
+  top: -100vh; left: -100vh;
+
+
+  & ~ div {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.75s;
+    padding: 0 15px 0 15px;
+  }
+
+  &:checked ~ div {
+    max-height: 1000px;
+    background-color: #ffffff;
+    padding: 0 15px 10px 15px;
+  }
+  & ~ svg {
+    transition: 0.75s;
+    rotate: 90deg;
+  }
+  &:checked ~ svg {
+    fill: #000000;
+    transition: 0.75s;
+    rotate: -90deg;
+  }
+}
+
+input[type="radio"]:checked ~ article {
+  background-color: #ffffff;
+}
+
+.Button-click {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: calc(33px - 15px);
+  right: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.price-rub {
+  width: 100%;
+  text-align: end;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+  width: 100%;
+  color: #B18B7B;
+}
+.record {
+  padding: 15px 30px;
+  background-color: #B18B7B;
+  color: #F6F6F6;
+  border-radius: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  border: solid white 2px;
+}
+
+.content-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-category {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.service-name {
+  font-size: 16px;
+}
+
+.service-price {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.name-description {
+ font-size: 12px;
+}
+.complex-item {
+  padding-left: 15px;
+}
