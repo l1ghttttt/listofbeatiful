@@ -62,26 +62,44 @@ input[type="radio"] {
   top: -100vh; left: -100vh;
 
 
-  & ~ div {
+  & ~ .content {
     max-height: 0;
     overflow: hidden;
-    transition: 0.75s;
+    transition: 0.4s;
     padding: 0 15px 0 15px;
   }
 
-  &:checked ~ div {
+  &:checked ~ .content {
+    max-height: 450px;
+    background-color: #ffffff;
+    padding: 0 15px 10px 15px;
+    transition: 0.75s;
+  }
+  & ~ .big-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    padding: 0 15px 0 15px;
+  }
+
+  &:checked ~ .big-content {
     max-height: 1000px;
     background-color: #ffffff;
     padding: 0 15px 10px 15px;
+    transition: 0.75s;
   }
   & ~ svg {
     transition: 0.75s;
     rotate: 90deg;
+    pointer-events: none;
+    transition-delay: 0.2s;
   }
   &:checked ~ svg {
     fill: #000000;
     transition: 0.75s;
     rotate: -90deg;
+    pointer-events: none;
+    transition-delay: 0s;
   }
 }
 
@@ -151,9 +169,8 @@ input[type="radio"]:checked ~ article {
 .service-category {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   font-size: 16px;
-  font-weight: bold;
   margin: 5px 0;
 }
 
@@ -164,7 +181,7 @@ input[type="radio"]:checked ~ article {
 .service-price {
   font-size: 16px;
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .name-description {
  font-size: 12px;
